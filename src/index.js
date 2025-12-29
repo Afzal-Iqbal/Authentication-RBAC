@@ -4,8 +4,11 @@ const dbConnect = require('./config/dbConnect');
 authRoutes = require('./routes/authRoutes');
 userRoutes = require('./routes/userRoutes');
 const app = express();
+const cors = require('cors');
+
 //middleware
 app.use(express.json());
+app.use(cors());
 
 // TODO: mount routes here, e.g. app.use('/api/auth', require('./routes/auth'))
 //Routes
